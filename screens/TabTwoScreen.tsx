@@ -1,16 +1,23 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
+import CalculationItem from '../components/CalculationItem';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function TabTwoScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
-    </View>
+    <ScrollView>
+      <View style={styles.container}>
+        <CalculationItem color={'red'} />
+        <CalculationItem color={'blue'} />
+        <CalculationItem color={'blue'} />
+        <CalculationItem color={'red'} />
+        <CalculationItem color={'green'} />
+        <CalculationItem color={'red'} />
+
+      </View>
+    </ScrollView>
   );
 }
 
@@ -18,11 +25,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    paddingTop: 10,
+    backgroundColor: 'white'
   },
   title: {
     fontSize: 20,
     fontWeight: 'bold',
+    marginVertical: 20,
   },
   separator: {
     marginVertical: 30,

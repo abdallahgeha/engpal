@@ -96,7 +96,7 @@ function TabThreeNavigator() {
       <TabTwoStack.Screen
         name="TabTwoScreen"
         component={TabThreeScreen}
-        options={{ headerTitle: "Tab Two Title" }}
+        options={{ headerTitle: "Profile" }}
       />
     </TabTwoStack.Navigator>
   );
